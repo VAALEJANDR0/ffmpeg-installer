@@ -1,7 +1,7 @@
 @echo off
 :: Descargar FFmpeg
 echo Descargando FFmpeg...
-curl -L -o "%TEMP%\ffmpeg-master-latest-win64-gpl.zip" https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl.zip
+powershell -Command "Invoke-WebRequest -Uri 'https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl.zip' -OutFile '%TEMP%\ffmpeg-master-latest-win64-gpl.zip'"
 
 :: Comprobar si la descarga fue exitosa
 if exist "%TEMP%\ffmpeg-master-latest-win64-gpl.zip" (
